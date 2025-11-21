@@ -1,0 +1,26 @@
+<h2>Employee List</h2>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Salary</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.email }}</td>
+      <td>{{ emp.salary }}</td>
+      <td>
+        <button [routerLink]="['/edit', emp.id]">Edit</button>
+        <button (click)="delete(emp.id)">Delete</button>
+        <button [routerLink]="['/details', emp.id]">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
