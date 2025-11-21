@@ -1,0 +1,13 @@
+<h2>Add Employee</h2>
+
+<label>Name</label>
+<input type="text" [(ngModel)]="name">
+
+<label>Email</label>
+<input type="email" [(ngModel)]="email">
+
+<label>Salary</label>
+<input type="number" [(ngModel)]="salary">
+
+<button (click)="save()">save</button>
+<p>Clicked: {{ name }} - {{ email }} - {{ salary }}</p>
